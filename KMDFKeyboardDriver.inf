@@ -1,0 +1,86 @@
+;
+; KMDFKeyboardDriver.inf
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=System; TODO: specify appropriate Class
+ClassGuid={4d36e97d-e325-11ce-bfc1-08002be10318}; TODO: specify appropriate ClassGuid
+Provider=%ManufacturerName%
+CatalogFile=KMDFKeyboardDriver.cat
+DriverVer = 09/04/2023,12.37.25.630
+PnpLockdown=1
+
+[DestinationDirs]
+DefaultDestDir = 12
+KMDFKeyboardDriver_Device_CoInstaller_CopyFiles = 11
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+KMDFKeyboardDriver.sys  = 1,,
+;
+
+
+;*****************************************
+; Install Section
+;*****************************************
+
+[Manufacturer]
+%ManufacturerName%=Standard,NTamd64
+
+[Standard.NTamd64]
+%KMDFKeyboardDriver.DeviceDesc%=KMDFKeyboardDriver_Device, Root\KMDFKeyboardDriver ; TODO: edit hw-id
+
+[KMDFKeyboardDriver_Device.NT]
+CopyFiles=Drivers_Dir
+
+[Drivers_Dir]
+KMDFKeyboardDriver.sys
+
+[KMDFKeyboardDriver_Device.NT.HW]
+AddReg = HIDVHF_Inst.NT.AddReg
+
+[HIDVHF_Inst.NT.AddReg]
+HKR,,"LowerFilters",0x00010000,"vhf"
+
+;-------------- Service installation
+[KMDFKeyboardDriver_Device.NT.Services]
+AddService = KMDFKeyboardDriver,%SPSVCINST_ASSOCSERVICE%, KMDFKeyboardDriver_Service_Inst
+
+; -------------- KMDFKeyboardDriver driver install sections
+[KMDFKeyboardDriver_Service_Inst]
+DisplayName    = %KMDFKeyboardDriver.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\KMDFKeyboardDriver.sys
+
+;
+;--- KMDFKeyboardDriver_Device Coinstaller installation ------
+;
+
+[KMDFKeyboardDriver_Device.NT.CoInstallers]
+AddReg=KMDFKeyboardDriver_Device_CoInstaller_AddReg
+CopyFiles=KMDFKeyboardDriver_Device_CoInstaller_CopyFiles
+
+[KMDFKeyboardDriver_Device_CoInstaller_AddReg]
+;
+
+
+[KMDFKeyboardDriver_Device_CoInstaller_CopyFiles]
+;
+
+
+[KMDFKeyboardDriver_Device.NT.Wdf]
+KmdfService =  KMDFKeyboardDriver, KMDFKeyboardDriver_wdfsect
+[KMDFKeyboardDriver_wdfsect]
+KmdfLibraryVersion = 1.15
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+ManufacturerName="<Georgijs Onischenko>" ;TODO: Replace with your manufacturer name
+DiskName = "KMDFKeyboardDriver Installation Disk"
+KMDFKeyboardDriver.DeviceDesc = "KMDFKeyboardDriver Device"
+KMDFKeyboardDriver.SVCDESC = "KMDFKeyboardDriver Service"

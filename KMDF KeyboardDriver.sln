@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KMDF KeyboardDriver", "KMDF KeyboardDriver.vcxproj", "{648E4211-995D-4C53-92B9-A0FE733F058B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KeyboardClient", "..\KeyboardClient\KeyboardClient.vcxproj", "{7AA8F03E-BD45-46E3-A731-BE6AD19CCE35}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM64 = Debug|ARM64
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM64 = Release|ARM64
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{648E4211-995D-4C53-92B9-A0FE733F058B}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{648E4211-995D-4C53-92B9-A0FE733F058B}.Debug|ARM64.Build.0 = Debug|ARM64
+		{648E4211-995D-4C53-92B9-A0FE733F058B}.Debug|ARM64.Deploy.0 = Debug|ARM64
+		{648E4211-995D-4C53-92B9-A0FE733F058B}.Debug|x64.ActiveCfg = Debug|x64
+		{648E4211-995D-4C53-92B9-A0FE733F058B}.Debug|x64.Build.0 = Debug|x64
+		{648E4211-995D-4C53-92B9-A0FE733F058B}.Debug|x64.Deploy.0 = Debug|x64
+		{648E4211-995D-4C53-92B9-A0FE733F058B}.Debug|x86.ActiveCfg = Debug|x64
+		{648E4211-995D-4C53-92B9-A0FE733F058B}.Debug|x86.Build.0 = Debug|x64
+		{648E4211-995D-4C53-92B9-A0FE733F058B}.Debug|x86.Deploy.0 = Debug|x64
+		{648E4211-995D-4C53-92B9-A0FE733F058B}.Release|ARM64.ActiveCfg = Release|ARM64
+		{648E4211-995D-4C53-92B9-A0FE733F058B}.Release|ARM64.Build.0 = Release|ARM64
+		{648E4211-995D-4C53-92B9-A0FE733F058B}.Release|ARM64.Deploy.0 = Release|ARM64
+		{648E4211-995D-4C53-92B9-A0FE733F058B}.Release|x64.ActiveCfg = Release|x64
+		{648E4211-995D-4C53-92B9-A0FE733F058B}.Release|x64.Build.0 = Release|x64
+		{648E4211-995D-4C53-92B9-A0FE733F058B}.Release|x64.Deploy.0 = Release|x64
+		{648E4211-995D-4C53-92B9-A0FE733F058B}.Release|x86.ActiveCfg = Release|x64
+		{648E4211-995D-4C53-92B9-A0FE733F058B}.Release|x86.Build.0 = Release|x64
+		{648E4211-995D-4C53-92B9-A0FE733F058B}.Release|x86.Deploy.0 = Release|x64
+		{7AA8F03E-BD45-46E3-A731-BE6AD19CCE35}.Debug|ARM64.ActiveCfg = Debug|x64
+		{7AA8F03E-BD45-46E3-A731-BE6AD19CCE35}.Debug|ARM64.Build.0 = Debug|x64
+		{7AA8F03E-BD45-46E3-A731-BE6AD19CCE35}.Debug|x64.ActiveCfg = Debug|x64
+		{7AA8F03E-BD45-46E3-A731-BE6AD19CCE35}.Debug|x64.Build.0 = Debug|x64
+		{7AA8F03E-BD45-46E3-A731-BE6AD19CCE35}.Debug|x86.ActiveCfg = Debug|Win32
+		{7AA8F03E-BD45-46E3-A731-BE6AD19CCE35}.Debug|x86.Build.0 = Debug|Win32
+		{7AA8F03E-BD45-46E3-A731-BE6AD19CCE35}.Release|ARM64.ActiveCfg = Release|x64
+		{7AA8F03E-BD45-46E3-A731-BE6AD19CCE35}.Release|ARM64.Build.0 = Release|x64
+		{7AA8F03E-BD45-46E3-A731-BE6AD19CCE35}.Release|x64.ActiveCfg = Release|x64
+		{7AA8F03E-BD45-46E3-A731-BE6AD19CCE35}.Release|x64.Build.0 = Release|x64
+		{7AA8F03E-BD45-46E3-A731-BE6AD19CCE35}.Release|x86.ActiveCfg = Release|Win32
+		{7AA8F03E-BD45-46E3-A731-BE6AD19CCE35}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {815C1FC6-87B1-4E4F-A125-1D7439A5DD5C}
+	EndGlobalSection
+EndGlobal
